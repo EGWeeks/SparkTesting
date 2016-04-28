@@ -1,5 +1,7 @@
 package com.course.idea;
 
+import com.course.idea.model.CourseIdeaDAO;
+import com.course.idea.model.SimpleCourseIdeaDAO;
 import spark.ModelAndView;
 import spark.template.handlebars.HandlebarsTemplateEngine;
 
@@ -11,6 +13,8 @@ import static spark.Spark.post;
 
 public class Main {
     public static void main(String[] args) {
+
+        CourseIdeaDAO dao = new SimpleCourseIdeaDAO();
 
 
         get("/", (req, res) -> {
