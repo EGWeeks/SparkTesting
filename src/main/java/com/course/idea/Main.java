@@ -10,9 +10,12 @@ import java.util.Map;
 
 import static spark.Spark.get;
 import static spark.Spark.post;
+import static spark.Spark.staticFileLocation;
 
 public class Main {
     public static void main(String[] args) {
+
+        staticFileLocation("/public");
 
         CourseIdeaDAO dao = new SimpleCourseIdeaDAO();
 
